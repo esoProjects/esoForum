@@ -37,3 +37,5 @@ To upgrade esoForum from an older version, simply:
 ### Troubleshooting
 
 If you are having problems installing esoForum, [open an issue](https://github.com/esoProjects/esoForum/issues).
+
+We are not affiliated with the original esoTalk project.
