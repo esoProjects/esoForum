@@ -1,6 +1,6 @@
 <?php
-// Copyright 2011 Toby Zerner, Simon Zerner
-// This file is part of esoTalk. Please see the included license file for usage information.
+// Copyright 2022 Andromeda-Z
+// This file is part of esoForum. Please see the included license file for usage information.
 
 if (!defined("IN_ESOTALK")) exit;
 
@@ -303,7 +303,7 @@ public function init()
 			$this->addToMenu("statistics", "statistic-online", $stat);
 		}
 
-		$this->addToMenu("meta", "copyright", "<a href='http://esotalk.org/' target='_blank'>".T("Powered by")." esoTalk</a>");
+		$this->addToMenu("meta", "copyright", "<a href='https://github.com/esoProjects/esoForum' target='_blank'>".T("Powered by")." esoForum</a>");
 
 		// Set up some default JavaScript files and language definitions.
 		$this->addJSFile("core/js/lib/jquery.js", true);
