@@ -1,7 +1,6 @@
 <?php
-// OMG FIRST COMMENT!!!11!
-// Copyright 2013 Toby Zerner, Simon Zerner
-// This file is part of esoTalk. Please see the included license file for usage information.
+// Copyright 2022 Andromeda-Z
+// This file is part of esoForum. Please see the included license file for usage information.
 
 define("IN_ESOTALK", 1);
 
