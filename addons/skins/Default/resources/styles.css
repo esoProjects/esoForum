@@ -6,11 +6,13 @@ here if necessary.
 */
 
 /* Global */
-body {font-size:14px; font-weight:300; margin:0; overflow-y:scroll; background:#fff; color:#666}
-body, input, textarea, select {font-family:open sans,lucida grande,lucida sans unicode,helvetica,arial,sans-serif}
+body {font-size:75%; font-weight:default; margin:0; overflow-y:scroll; background:linear-gradient(#e4e5ea, #fff 70%); background-repeat:no-repeat; color:#666}
+body, input, textarea, select {font-family:arial,helvetica,sans-serif; }
 input, textarea, select {font-size:100%}
 strong {font-weight:600}
 
+#body {background:linear-gradient(#ecedee, #fff); background-repeat:no-repeat; background-size:100% 90px}
+#wrapper {border-top:0; border-bottom:0; border-left:1px solid; border-right:1px solid; border-image:linear-gradient(to bottom, #c1c1c1, #fff); border-image-slice:1; background:#fff}
 
 /* Links */
 a {text-decoration:none}
@@ -60,7 +62,7 @@ p, ul, pre {line-height:1.6em}
 /* Miscellaneous */
 .permissionsGrid .group th {font-weight:300}
 .action .name, .action a, .action strong {font-weight:600}
-.avatar {border-radius:32px}
+.avatar {border-radius:0}
 .scrubber li.selected > a {font-weight:600}
 
 
@@ -77,7 +79,7 @@ p, ul, pre {line-height:1.6em}
 
 
 /* Header */
-#hdr {background:#fff; position:fixed; width:100%; z-index:100; border-bottom:1px solid}
+#hdr {background:linear-gradient(#fff, #e4e5ea); position:fixed; width:100%; z-index:100; border-bottom:1px solid; box-shadow: 0 0 5px 0 #ababab;}
 #hdr-inner {padding-right:580px; white-space:nowrap}
 #hdr h1 {display:inline-block; max-width:100%; font-size:20px; padding:14px 0; margin:0; font-weight:300; overflow:hidden; white-space:nowrap; text-overflow:ellipsis}
 #hdr h1 img {display:inline; vertical-align:-5px; margin-right:5px; border:0}
@@ -90,7 +92,7 @@ p, ul, pre {line-height:1.6em}
 #userMenu .item-user .avatar {vertical-align:middle; margin:-5px 8px -5px 0}
 #userMenu.menu > li {margin-left:18px; text-align:left}
 
-#hdr .button {border-radius:4px; font-size:100%; padding:9px 12px; margin:-7px 0}
+#hdr .button {border-radius:4px; font-size:130%; padding:5px 6px; margin:-7px 0}
 #hdr #notifications {color:#ccc}
 #hdr #notifications.new {color:#fff !important}
 
@@ -108,16 +110,21 @@ input[type=text]:focus, input[type=password]:focus, textarea:focus, input[type=n
 
 
 /* Buttons */
-.button {background:#f6f6f6; font-weight:600; border:1px solid transparent; margin-bottom:1px; white-space:nowrap; height:30px; font-size:90%; padding:0 10px 2px; line-height:30px; -webkit-appearance:none}
-.button.big {height:34px; font-size:90%; padding:0 10px 0; line-height:28px}
-.button:hover, .button:active {border-color:#ddd}
-.button:active {background-color:#ddd}
-.button.disabled {opacity:0.25; cursor:default; border-color:transparent !important}
+.button {background:linear-gradient(#9dcade 25%, #44a2c9 50%, #1e77af 50%, #37dcee 100%); border:1px solid #1a6b9d; border-radius:5px; box-shadow:inset 0 1px 1px rgb(255 255 255 / 50%); margin-bottom:1px; white-space:nowrap; height:25px; -webkit-appearance:none; color:#fff!important; text-shadow: #046b9e 0 -1px; font-size:110%}
+.button.big {height:30px; font-size:140%}
+.button:hover {box-shadow:inset 0px 0px 5px 2px rgb(255, 255, 255, .5)}
+.button:active {box-shadow:inset 0px 0px 15px 2px rgba(0, 0, 0, .5)}
+.button.disabled {cursor:default; background:linear-gradient(#e9ebe8 25%, #d8dad6 50%, #cbceca 50%, #f8faf7 100%); border:1px solid #b2b4b1; box-shadow:inset 0 1px 1px #ffffff; text-shadow:#cbceca 0 -1px}
+.button i {color:#fff!important}
 
-a.button {padding:8px 10px; height:auto; line-height:1em; display:inline-block}
-a.button.big {padding:10px; height:auto; line-height:1em}
+a.button {padding:4px 5px; height:auto; line-height:1em; display:inline-block}
+a.button.big {padding:5px; height:auto; line-height:1em}
 
 .button.submit {color:#fff}
 .button.submit:hover {border-color:#000; color:#fff}
 
 .buttonGroup .button {margin-right:-3px}
+
+.active .popupButton, .active .popupButton i {color:#000!important; text-shadow:none}
+
+.tabs.big li.selected a {border-color:rgba(0, 0, 0, 0.50); border-width:1px; border-style:solid; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);}
