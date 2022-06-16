@@ -1,6 +1,6 @@
 <?php
-// Copyright 2011 Toby Zerner, Simon Zerner
-// This file is part of esoTalk. Please see the included license file for usage information.
+// Copyright 2022 Andromeda-Z
+// This file is part of esoForum. Please see the included license file for usage information.
 
 if (!defined("IN_ESOTALK")) exit;
 
@@ -12,11 +12,11 @@ if (!defined("IN_ESOTALK")) exit;
 
 ET::$skinInfo["Default"] = array(
 	"name" => "Default",
-	"description" => "The default esoTalk skin.",
+	"description" => "The default esoForum skin.",
 	"version" => ESOTALK_VERSION,
-	"author" => "esoTalk Team",
-	"authorEmail" => "support@esotalk.org",
-	"authorURL" => "http://esotalk.org",
+	"author" => "esoForum Team",
+	"authorEmail" => "none",
+	"authorURL" => "http://github.com/esoProjects/esoForum",
 	"license" => "GPLv2"
 );
 
