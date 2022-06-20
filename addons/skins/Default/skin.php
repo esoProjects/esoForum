@@ -15,7 +15,7 @@ ET::$skinInfo["Default"] = array(
 	"description" => "The default esoForum skin.",
 	"version" => ESOTALK_VERSION,
 	"author" => "esoForum Team",
-	"authorEmail" => "none",
+	"authorEmail" => "none@example.com",
 	"authorURL" => "http://github.com/esoProjects/esoForum",
 	"license" => "GPLv2"
 );
@@ -42,6 +42,9 @@ public function handler_init($sender)
 		$sender->masterView = "mobile.master";
 		$sender->addToHead("<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>");
 	}
+
+    // Add the favicon
+    $sender->addToHead("<link rel=\"shortcut icon\" type=\"image/ico\" href=\"" . C("esoTalk.baseURL") .$this->resource("favicon.ico") ."\">");
 
 	$sender->addCSSFile("config/colors.css", true);
 
@@ -70,7 +73,7 @@ protected function writeColors($primary)
 
 	$css = file_get_contents($this->resource("colors.css"));
 	$css = str_replace(array("{primary}", "{secondary}", "{tertiary}"), array($primary, $secondary, $tertiary), $css);
-	file_put_contents(PATH_CONFIG."/colors.css", $css);
+	file_put_contents(PATH_CONFIG."/colors.css", $css); 
 }
 
 
