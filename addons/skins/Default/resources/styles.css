@@ -6,7 +6,7 @@ here if necessary.
 */
 
 /* Global */
-body {font-size:75%; font-weight:default; margin:0; overflow-y:scroll; background:linear-gradient(#e4e5ea, #fff 70%); background-repeat:no-repeat; color:#666}
+body {font-size:12px; margin:0; overflow-y:scroll; background:linear-gradient(#e4e5ea, #fff 70%); background-repeat:no-repeat; color:#000}
 body, input, textarea, select {font-family:arial,helvetica,sans-serif; }
 input, textarea, select {font-size:100%}
 strong {font-weight:600}
@@ -38,23 +38,34 @@ p, ul, pre {line-height:1.6em}
 
 
 /* Conversation list: adjust the typography. */
-.conversationList .title {font-weight:300; font-size:16px}
+.conversationList .title {font-weight:300}
 .conversationList .unread .title a {font-weight:600}
 .conversationList .action * {font-weight:300}
-
 
 /* Channel list */
 .channelList .channel {font-weight:600}
 
 
 /* Posts */
-.postHeader h3 {font-size:120%; font-weight:600}
-.postBody h4 {font-weight:300}
+.thing {
+    border: 1px solid #bbb;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    border-color:#bbb!important;
+    background: #fff;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+.thing:before {border-color:#888}
+.postHeader h3 {font-size:110%; font-weight:600}
+.postHeader {border-bottom: 1px solid #ccc; margin-bottom:4px}
+.postBody h4 {font-size: 120%; font-weight: bold; border-bottom: 1px solid #bbb}
 .replyPlaceholder .postHeader h3 {font-weight:300}
-.postBody {line-height:1.75em; font-size:16px}
+.postBody {}
 .postBody a {font-weight:600}
-
-
+pre, code, .fixed {font-size:120%}
 /* Tabs */
 .tabs.big li.selected a {color:#fff; border:0; padding:11px 14px}
 
@@ -67,10 +78,11 @@ p, ul, pre {line-height:1.6em}
 
 
 /* Layout */
-#hdr-content, #body-content, #ftr-content {margin:0 auto; min-width:760px; max-width:1100px; padding:0 30px}
+#hdr-content, #body-content, #ftr-content {margin:0 auto; min-width:760px; max-width:980px; padding:0 20px;}
+#body-content {border-left: 1px solid; border-right: 1px solid; border-image: linear-gradient(to bottom, #c1c1c1, #fff); border-image-slice: 1;}
 #body-content, #ftr-content {background-color:#fff}
 #body-content {padding-bottom:20px; padding-top:10px}
-#body {padding-top:60px}
+#body {padding-top:55px}
 
 
 /* Menus (inline lists) */
@@ -79,7 +91,7 @@ p, ul, pre {line-height:1.6em}
 
 
 /* Header */
-#hdr {background:linear-gradient(#fff, #e4e5ea); position:fixed; width:100%; z-index:100; border-bottom:1px solid; box-shadow: 0 0 5px 0 #ababab;}
+#hdr {background:linear-gradient(#fff, #e4e5ea); position:fixed; width:100%; z-index:100; border-bottom:1px solid; box-shadow: 0 0 5px 0 #ababab}
 #hdr-inner {padding-right:580px; white-space:nowrap}
 #hdr h1 {display:inline-block; max-width:100%; font-size:20px; padding:14px 0; margin:0; font-weight:300; overflow:hidden; white-space:nowrap; text-overflow:ellipsis}
 #hdr h1 img {display:inline; vertical-align:-5px; margin-right:5px; border:0}
@@ -105,15 +117,17 @@ p, ul, pre {line-height:1.6em}
 
 
 /* Text inputs */
-input[type=text], input[type=password], input[type=number], input[type=email], textarea, .input {font-weight:300; background:#fff; border:1px solid; padding:5px; border-radius:3px; vertical-align:-1px; margin:0; -webkit-appearance:none}
-input[type=text]:focus, input[type=password]:focus, textarea:focus, input[type=number]:focus, input[type=email]:focus, .input:focus {outline:0}
+input[type=text], input[type=password], input[type=number], input[type=email], textarea, .input {box-shadow: inset 0 5px 10px rgb(0 0 0 / 7%); background: #fff; border: 1px solid #bbb!important}
+input[type=text]:focus, input[type=password]:focus, textarea:focus, input[type=number]:focus, input[type=email]:focus, .input:focus {border: 1px solid #777; border-radius:0}
+.search input.text {height:22px}
+.scrubberContent .search input.text {height:25px}
 
 
 /* Buttons */
 .button {background:linear-gradient(#9dcade 25%, #44a2c9 50%, #1e77af 50%, #37dcee 100%); border:1px solid #1a6b9d; border-radius:5px; box-shadow:inset 0 1px 1px rgb(255 255 255 / 50%); margin-bottom:1px; white-space:nowrap; height:25px; -webkit-appearance:none; color:#fff!important; text-shadow: #046b9e 0 -1px; font-size:110%}
-.button.big {height:30px; font-size:140%}
-.button:hover {box-shadow:inset 0px 0px 5px 2px rgb(255, 255, 255, .5)}
-.button:active {box-shadow:inset 0px 0px 15px 2px rgba(0, 0, 0, .5)}
+.button.big {height:27px; font-size:140%}
+.button:hover {box-shadow:inset 0px 0px 5px 2px rgb(255, 255, 255, .5); border:1px solid #1a6b9d!important}
+.button:active {box-shadow:inset 0px 0px 15px 2px rgba(0, 0, 0, .5); border:1px solid #1a6b9d}
 .button.disabled {cursor:default; background:linear-gradient(#e9ebe8 25%, #d8dad6 50%, #cbceca 50%, #f8faf7 100%); border:1px solid #b2b4b1; box-shadow:inset 0 1px 1px #ffffff; text-shadow:#cbceca 0 -1px}
 .button i {color:#fff!important}
 
@@ -128,3 +142,23 @@ a.button.big {padding:5px; height:auto; line-height:1em}
 .active .popupButton, .active .popupButton i {color:#000!important; text-shadow:none}
 
 .tabs.big li.selected a {border-color:rgba(0, 0, 0, 0.50); border-width:1px; border-style:solid; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);}
+
+.tabs.big li a {padding: 5px 10px;}
+.tabs.big li.selected a {padding: 5px 10px;}
+
+.tabs.big {border-bottom:unset; padding-bottom: 2px}
+
+#memberPanes {margin: 10px 0}
+
+#memberProfile .avatar, .avatar img {
+    float: left;
+    padding: 3px;
+    border: 1px solid #d1d1d1;
+    -webkit-box-shadow: 0 1px 0 rgb(0 0 0 / 5%);
+    box-shadow: 0 1px 0 rgb(0 0 0 / 5%);
+    border-radius: 4px;
+    background: #fff;
+    margin-right: 15px;
+}
+
+.colorSwatch {border-color:rgba(0, 0, 0, 0.50); border-width:1px; border-style:solid; box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25)}
